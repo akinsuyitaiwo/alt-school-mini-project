@@ -1,29 +1,13 @@
-const express = require("express");
-const cors = require("cors");
-const db = require("./database/index.js")
+const db = require("./database/index.js");
+const createServer = require("./utils/server.js");
 require("dotenv").config();
 
-const app = express();
-
-const port = process.env.PORT
-
-app.use(express.json());
-app.use(cors());
-
+const app = createServer();
+const port = process.env.PORT || 5000;
 
 app.listen(port, async() => {
 	await db.connect();
 	console.info(`Server is running on port: ${port}`);
 });
 
-
-
-
-
-
-
-
-
-
-
-module.exports = app;
+module.exports = { app };
