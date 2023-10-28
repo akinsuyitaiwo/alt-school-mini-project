@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const methodOverride = require("method-override");
 const router = require("../routes/index.js");
-const requestLogger = require("../middleware/requestLogger.js");
+const requestLogger = require("../middleware/reqLogger.js");
 
 const createServer = () => {
 	const app = express();

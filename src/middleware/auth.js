@@ -1,4 +1,4 @@
-const models = require("../models/index.js");
+const models = require("../model/index.js");
 const { validateUserToken } = require("../utilities/jwt.js");
 require("dotenv/config.js");
 

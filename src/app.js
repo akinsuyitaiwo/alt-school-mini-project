@@ -1,5 +1,5 @@
 const db = require("./database/index.js");
-const createServer = require("./utils/server.js");
+const createServer = require("./utilities/server.js");
 require("dotenv").config();
 
 const app = createServer();
