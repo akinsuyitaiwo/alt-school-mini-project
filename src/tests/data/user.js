@@ -1,10 +1,10 @@
 const user1 = {
-	username: "mangistony",
+	username: "temidayo",
 	password: "password"
 };
 
 const user2 = {
-	username: "manga",
+	username: "akinsuyi",
 	password: "password1"
 };
 
@@ -13,15 +13,12 @@ const user3 = {
 };
 
 const user4 = {
-	username: "baboon",
+	username: "kehinde",
 	password: "password"
 };
 
-const user5 = {
-	username: "frosh",
-	password: "password"
-};
+
 
 module.exports = {
-	user1, user2, user3, user4, user5
+	user1, user2, user3, user4
 };

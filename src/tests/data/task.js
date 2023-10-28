@@ -1,10 +1,10 @@
 const task1 = {
-	title: "Read a book",
-	description: "Read 'Angela and the model' novel"
+	title: "try a new sport",
+	description: "Try learning soccer"
 };
 
 const task2 = {
-	title: "Go for jugging",
+	title: "Go for a run",
 };
 
 const task3 = {
@@ -17,11 +17,6 @@ const task4 = {
 	description: "I'll need the nap so badly"
 };
 
-const task5 = {
-	title: "Go for jugging",
-	description: "leave the house by 7, jug round the fence in 5 rounds and on each round give me a health 100 push ups for celebrating each round. Good luck soldier"
-};
-
 module.exports = {
-	task1, task2, task3, task4, task5
+	task1, task2, task3, task4
 };
