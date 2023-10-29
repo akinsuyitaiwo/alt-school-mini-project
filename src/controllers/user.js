@@ -1,6 +1,6 @@
 const { validateUser } = require("../validations/user.js");
 const bcrypt = require("bcrypt");
-const models = require("../model/user.js");
+const models = require("../model/index.js");
 const { generateToken } = require("../utilities/jwt.js");
 const logger = require("../utilities/logger.js");
 

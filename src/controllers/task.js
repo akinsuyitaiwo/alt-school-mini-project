@@ -1,5 +1,5 @@
 const { validateTaskDetails } = require("../validations/task.js");
-const models = require("../model/task.js");
+const models = require("../model/index.js");
 const logger = require("../utilities/logger.js");
 
 const createTask = async(req, res) => {
@@ -21,7 +21,7 @@ const createTask = async(req, res) => {
 			user: user.id
 		});
 
-		return res.status(200).render("viewSingle", {
+		return res.status(200).render("viewOne", {
 			task: createdTask, taskId: createdTask.id
 		});
 	} catch (error) {
@@ -71,7 +71,7 @@ const readAllTasks = async (req, res) => {
   
 		const totalPages = Math.ceil(count / limit);
   
-		return res.status(200).render("viewTask", {
+		return res.status(200).render("view", {
 			total: tasks.length,
 			totalPages,
 			currentPage: page,
@@ -108,7 +108,7 @@ const readTask = async (req, res) => {
 			});
 		}
 		
-		return res.status(200).render("viewSingle", {
+		return res.status(200).render("viewOne", {
 			taskId, task
 		});
 
@@ -150,7 +150,7 @@ const updateTask = async (req, res) => {
 
 		const updatedTask = await models.Task.findByIdAndUpdate(taskId, updateObject, { new: true });
 
-		return res.status(200).render("viewSingle", {
+		return res.status(200).render("viewOne", {
 			taskId, task: updatedTask
 		});
 	} catch (error) {
